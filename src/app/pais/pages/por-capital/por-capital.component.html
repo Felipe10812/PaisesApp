@@ -1,1 +1,22 @@
+<h2>Por capital</h2>
+<hr>
 
+<div class="row">
+    <div class="col">
+        <!-- Con [] se enviaria como un string -->
+        <app-pais-input (onEnter)="buscar ( $event )" placeholder="Buscar capital..."></app-pais-input>
+    </div>
+</div>
+
+<hr>
+
+<div class="alert alert-danger" *ngIf="hayError">
+    No se encontro nada con termino {{termino}}
+</div>
+
+<div class="row" *ngIf="paises.length > 0">
+    <div class="col">
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+
+    </div>
+</div>
