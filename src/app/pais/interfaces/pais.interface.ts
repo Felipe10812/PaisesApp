@@ -5,7 +5,9 @@ export interface Country {
         oficial: string;
     };
     topLevelDomain: string[];
-    alpha2Code:     string;
+    cca2:           string;
+    cca3:           string;
+    ccn3:           number;
     alpha3Code:     string;
     callingCodes:   string[];
     capital:        string;
@@ -20,7 +22,7 @@ export interface Country {
     timezones:      string[];
     borders:        string[];
     nativeName:     string;
-    numericCode:    string;
+    numericCode:    number;
     flags:          Flags;
     currencies:     Currency[];
     languages:      Language[];
@@ -56,15 +58,53 @@ export interface RegionalBloc {
 }
 
 export interface Translations {
-    br: string;
-    pt: string;
-    nl: string;
-    hr: string;
-    fa: string;
-    de: string;
-    es: string;
-    fr: string;
-    ja: string;
-    it: string;
-    hu: string;
+    
+    ara: {
+        common: string;
+        oficial: string;
+    };
+    pol: {
+        common: string;
+        oficial: string;
+    };
+    rus: {
+        common: string;
+        oficial: string;
+    };
+    urd: {
+        common: string;
+        oficial: string;
+    };
+    swe: {
+        common: string;
+        oficial: string;
+    };
+    spa: {
+        common: string;
+        oficial: string;
+    };
+    zho: {
+        common: string;
+        oficial: string;
+    };
+    fr: {
+        common: string;
+        oficial: string;
+    };
+    jpn: {
+        common: string;
+        oficial: string;
+    };
+    ita: {
+        common: string;
+        oficial: string;
+    };
+    sl: {
+        common: string;
+        oficial: string;
+    };
+    hun: {
+        common: string;
+        oficial: string;
+    }
 }

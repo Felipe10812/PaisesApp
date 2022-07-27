@@ -1,1 +1,44 @@
-<p>ver-pais works!</p>
+<div class="alert alert-info" *ngIf="!pais; else divPais">
+    Espere por favor...
+</div>
+
+<ng-template #divPais>
+    <div class="row">
+        <div class="col-12">
+            <h1>Pais: <small>{{pais.name.common}}</small></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h2>Bandera</h2>
+            <img [src]="pais.flags.png" alt="Bandera de {{pais.flags.png}}" class="img-thumbnail">
+        </div>
+
+        <div class="col">
+            <h3> Informacion </h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Poblacion: </strong>{{pais.population | number}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Codigo numerico: </strong>{{pais.ccn3}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Codigo alpha3: </strong>{{pais.cca3}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span *ngFor="let t of pais.translations | keyvalue" class="badge bg-primary mr-1">{{t.value.common}}</span>
+            <!-- <span class="badge bg-primary mr-1">{{pais.translations.hun['common']}}</span> -->
+        </div>
+    </div>
+
+    <!-- <pre class="mt-5"> {{ pais | json }} </pre> -->
+
+</ng-template>
