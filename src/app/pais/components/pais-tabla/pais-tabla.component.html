@@ -11,10 +11,10 @@
 
     <tbody>
         <!-- Nombre de las propiedades, asi es como funciona  -->
-        <tr *ngFor="let pais of paises; let i = index">
+        <tr *ngFor="let pais of paises; let i = index" class=" animate__animated animate__zoomIn">
             <td>{{ i + 1 }}</td>
             <td>
-                <img class="small-flag" [src]="pais.flags.png" alt="Bandera de {{pais.flags.png}}">
+                <img class="small-flag animate__fadeInLeft" [src]="pais.flags.png" alt="Bandera de {{pais.flags.png}}">
             </td>
             <td>{{pais.capital}}, {{pais.name['common']}}</td>
             <!-- | pipes -->

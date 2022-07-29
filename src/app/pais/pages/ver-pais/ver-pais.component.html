@@ -3,16 +3,16 @@
 </div>
 
 <ng-template #divPais>
-    <div class="row">
+    <div class="row ">
         <div class="col-12">
             <h1>Pais: <small>{{pais.name.common}}</small></h1>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row ">
         <div class="col-4">
             <h2>Bandera</h2>
-            <img [src]="pais.flags.png" alt="Bandera de {{pais.flags.png}}" class="img-thumbnail">
+            <img [src]="pais.flags.png" alt="Bandera de {{pais.flags.png}}" class="img-thumbnail animate__animated animate__jackInTheBox">
         </div>
 
         <div class="col">
@@ -25,7 +25,7 @@
                     <strong>Codigo numerico: </strong>{{pais.ccn3}}
                 </li>
                 <li class="list-group-item">
-                    <strong>Codigo alpha3: </strong>{{pais.cca3}}
+                    <strong>Codigo: </strong>{{pais.cca3}}
                 </li>
             </ul>
         </div>
